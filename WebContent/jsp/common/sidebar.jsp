@@ -26,7 +26,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           
           <li class="nav-item">
-            <a href="<c:url value="/list.htm"/>" class="nav-link">
+            <a href="<c:url value="/listClient.htm"/>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                Lista Clienti
@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<c:url value="/listAngajat.htm"/>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                Lista Angajati
@@ -42,7 +42,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<c:url value="/listMasina.htm"/>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
               Lista Masini

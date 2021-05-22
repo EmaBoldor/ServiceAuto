@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Adaugare client</title>
 <jsp:include page="/jsp/common/head_imports.jsp"/>
 </head>
 <body class="hold-transition sidebar-mini">
