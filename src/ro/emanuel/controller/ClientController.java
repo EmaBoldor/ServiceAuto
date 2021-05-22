@@ -65,7 +65,7 @@ public class ClientController {
 			e.printStackTrace();
 		}
 		
-		return new ModelAndView("redirect:/list.htm");
+		return new ModelAndView("redirect:/listClient.htm");
 	}
 
 	//delete
@@ -74,7 +74,7 @@ public class ClientController {
 
 		ClientDAO.deleteClient(id);
 
-		return new ModelAndView("redirect:/list.htm");
+		return new ModelAndView("redirect:/listClient.htm");
 
 	}
 	
@@ -99,6 +99,6 @@ public class ClientController {
 			e.printStackTrace();
 		}
 		
-		return new ModelAndView("redirect:/list.htm");
+		return new ModelAndView("redirect:/listClient.htm");
 	}
 }

@@ -65,7 +65,7 @@ public class AngajatController {
 			e.printStackTrace();
 		}
 		
-		return new ModelAndView("redirect:/list.htm");
+		return new ModelAndView("redirect:/listAngajat.htm");
 	}
 
 	//delete
@@ -74,7 +74,7 @@ public class AngajatController {
 
 		AngajatDAO.deleteAngajat(id);
 
-		return new ModelAndView("redirect:/list.htm");
+		return new ModelAndView("redirect:/listAngajat.htm");
 
 	}
 	
@@ -99,6 +99,6 @@ public class AngajatController {
 			e.printStackTrace();
 		}
 		
-		return new ModelAndView("redirect:/list.htm");
+		return new ModelAndView("redirect:/listAngajat.htm");
 	}
 }

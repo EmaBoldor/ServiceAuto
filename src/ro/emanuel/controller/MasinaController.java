@@ -64,7 +64,7 @@ public class MasinaController {
 			e.printStackTrace();
 		}
 		
-		return new ModelAndView("redirect:/list.htm");
+		return new ModelAndView("redirect:/listMasina.htm");
 	}
 
 	//delete
@@ -73,7 +73,7 @@ public class MasinaController {
 
 		MasinaDAO.deleteMasina(id);
 
-		return new ModelAndView("redirect:/list.htm");
+		return new ModelAndView("redirect:/listMasina.htm");
 
 	}
 	
@@ -98,6 +98,6 @@ public class MasinaController {
 			e.printStackTrace();
 		}
 		
-		return new ModelAndView("redirect:/list.htm");
+		return new ModelAndView("redirect:/listMasina.htm");
 	}
 }

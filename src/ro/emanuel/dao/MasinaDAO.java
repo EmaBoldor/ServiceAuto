@@ -78,7 +78,7 @@ public static Masina getMasinaById(int id) throws SQLException {
 	}
 	
 	public static void createMasina(String marca, String model, String culoare) throws SQLException{
-		String insert="insert into client (marca, model, culoare)"
+		String insert="insert into masina (marca, model, culoare)"
 				+ "value(?,?,?);";
 		
 		Connection con = ServiceDBHelper.getConnection();

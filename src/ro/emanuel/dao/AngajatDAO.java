@@ -77,8 +77,8 @@ public static Angajat getAngajatById(int id) throws SQLException {
 		return result;
 	}
 	
-	public static void createClient(String nume, int vechime, String calificare) throws SQLException{
-		String insert="insert into client (nume, vechime, calificare)"
+	public static void createAngajat(String nume, int vechime, String calificare) throws SQLException{
+		String insert="insert into angajat (nume, vechime, calificare)"
 				+ "value(?,?,?);";
 		
 		Connection con = ServiceDBHelper.getConnection();
@@ -95,7 +95,7 @@ public static Angajat getAngajatById(int id) throws SQLException {
 	}
 	
 	public static void createAngajat(Angajat s) throws SQLException {
-		createClient(s.getNume(),s.getVechime(),s.getCalificare());
+		createAngajat(s.getNume(),s.getVechime(),s.getCalificare());
 	}
 	
 	public static void updateAngajat(Angajat s) throws SQLException {
