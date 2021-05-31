@@ -51,7 +51,7 @@
 
 </form:form>
 <br/><br/>
-<a href="<c:url value="/list.htm"/>">Inapoi la lista</a>
+<a href="<c:url value="/listMasina.htm"/>">Inapoi la lista</a>
 
 
    </div>

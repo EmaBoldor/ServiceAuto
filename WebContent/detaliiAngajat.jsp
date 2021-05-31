@@ -33,7 +33,7 @@ Nume: <c:out value="${angajat.nume}"/><br/>
 Vechime: <c:out value="${angajat.vechime}"/><br/>
 Calificare: <c:out value="${angajat.calificare}"/><br/>
 <br/><br/>
-<a href="<c:url value="/list.htm"/>">Inapoi la lista</a>
+<a href="<c:url value="/listAngajat.htm"/>">Inapoi la lista</a>
 
 
 

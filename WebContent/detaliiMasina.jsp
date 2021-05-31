@@ -33,7 +33,7 @@ Marca: <c:out value="${masina.marca}"/><br/>
 Model: <c:out value="${masina.model}"/><br/>
 Culoare: <c:out value="${masina.culoare}"/><br/>
 <br/><br/>
-<a href="<c:url value="/list.htm"/>">Inapoi la lista</a>
+<a href="<c:url value="/listMasina.htm"/>">Inapoi la lista</a>
 
 
 

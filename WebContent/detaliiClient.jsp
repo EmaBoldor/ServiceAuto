@@ -32,8 +32,9 @@ Id: <c:out value="${client.id}"/><br/>
 Nume: <c:out value="${client.nume}"/><br/>
 Email: <c:out value="${client.email}"/><br/>
 Telefon: <c:out value="${client.telefon}"/><br/>
+Angajat: <c:out value="${angajati[client.angajatId]}"/><br/>
 <br/><br/>
-<a href="<c:url value="/list.htm"/>">Inapoi la lista</a>
+<a href="<c:url value="/listClient.htm"/>">Inapoi la lista</a>
 
 
 

@@ -36,6 +36,7 @@
 					<td>Nume</td>
 					<td>Email</td>
 					<td>Telefon</td>
+					<td>Angajat</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -46,9 +47,10 @@
 						<td><c:out value="${st.nume}"/></td>
 						<td><c:out value="${st.email}"/></td> 
 						<td><c:out value="${st.telefon}"/></td>
-						<td><a class="btn btn-info" href="<c:url value="/detalii.htm?id=${st.id}"/>">Detalii</a></td>
+						<td><c:out value="${angajati[st.angajatId]}"/></td>
+						<td><a class="btn btn-info" href="<c:url value="/detaliiClient.htm?id=${st.id}"/>">Detalii</a></td>
 						<td><a class="btn btn-success" href="<c:url value="/editare-client.htm?id=${st.id}"/>">Editare</a></td>
-						<td><a class="btn btn-danger" href="<c:url value="/delete.htm?id=${st.id}"/>">Delete</a></td>
+						<td><a class="btn btn-danger" href="<c:url value="/deleteClient.htm?id=${st.id}"/>">Delete</a></td>
 					</tr>
 				</c:forEach>
 				</table>

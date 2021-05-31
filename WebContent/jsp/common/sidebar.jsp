@@ -26,6 +26,14 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           
           <li class="nav-item">
+            <a href="<c:url value="/list.htm"/>" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+             Pagina de start
+             </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="<c:url value="/listClient.htm"/>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>

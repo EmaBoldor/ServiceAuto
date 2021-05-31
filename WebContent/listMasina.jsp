@@ -46,14 +46,14 @@
 						<td><c:out value="${st.marca}"/></td>
 						<td><c:out value="${st.model}"/></td> 
 						<td><c:out value="${st.culoare}"/></td>
-						<td><a class="btn btn-info" href="<c:url value="/detalii.htm?id=${st.id}"/>">Detalii</a></td>
+						<td><a class="btn btn-info" href="<c:url value="/detaliiMasina.htm?id=${st.id}"/>">Detalii</a></td>
 						<td><a class="btn btn-success" href="<c:url value="/editare-masina.htm?id=${st.id}"/>">Editare</a></td>
-						<td><a class="btn btn-danger" href="<c:url value="/delete.htm?id=${st.id}"/>">Delete</a></td>
+						<td><a class="btn btn-danger" href="<c:url value="/deleteMasina.htm?id=${st.id}"/>">Delete</a></td>
 					</tr>
 				</c:forEach>
 				</table>
 				<br/><br/>
-				<a class="btn btn-primary" href="<c:url value="/adaugare-student.htm"/>">Adaugare masina</a>
+				<a class="btn btn-primary" href="<c:url value="/adaugare-masina.htm"/>">Adaugare masina</a>
            
               </div>
             </div>

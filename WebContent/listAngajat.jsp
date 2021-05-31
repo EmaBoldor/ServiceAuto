@@ -46,9 +46,9 @@
 						<td><c:out value="${st.nume}"/></td>
 						<td><c:out value="${st.vechime}"/></td> 
 						<td><c:out value="${st.calificare}"/></td>
-						<td><a class="btn btn-info" href="<c:url value="/detalii.htm?id=${st.id}"/>">Detalii</a></td>
+						<td><a class="btn btn-info" href="<c:url value="/detaliiAngajat.htm?id=${st.id}"/>">Detalii</a></td>
 						<td><a class="btn btn-success" href="<c:url value="/editare-angajat.htm?id=${st.id}"/>">Editare</a></td>
-						<td><a class="btn btn-danger" href="<c:url value="/delete.htm?id=${st.id}"/>">Delete</a></td>
+						<td><a class="btn btn-danger" href="<c:url value="/deleteAngajat.htm?id=${st.id}"/>">Delete</a></td>
 					</tr>
 				</c:forEach>
 				</table>

@@ -41,12 +41,21 @@
 	<label for="telefon">Telefon</label><br/>
 	<form:input path="telefon" class="form-control"/>
 </div>
+<div class="form-group">
+	<label for="angajatId">Angajat</label><br/>
+	
+	<form:select path="angajatId" class="form-control">
+    	<form:options items="${angajati}" itemValue="id" itemLabel="calificare"/>
+	</form:select>
+	
+	
+</div>
 
 <input type="submit" value="Salveaza" class="btn btn-primary"/><br/>
 
 </form:form>
 <br/><br/>
-<a href="<c:url value="/list.htm"/>">Inapoi la lista</a>
+<a href="<c:url value="/listClient.htm"/>">Inapoi la lista</a>
 
 
    </div>
