@@ -24,7 +24,8 @@ public static Client getClientById(int id) throws SQLException {
 			String nume = rs.getString("nume");
 			String email = rs.getString("email");
 			int telefon = rs.getInt("telefon");
-			result = new Client(id, nume, email, telefon);
+			int angajatId = rs.getInt("angajatId");
+			result = new Client(id, nume, email, telefon, angajatId);
 		}
 		ServiceDBHelper.closeConnection();
 		return result;
@@ -43,8 +44,9 @@ public static Client getClientById(int id) throws SQLException {
 			String nume = rs.getString("nume");
 			String email = rs.getString("email");
 			int telefon = rs.getInt("telefon");
+			int angajatId = rs.getInt("angajatId");
 
-			Client s = new Client(id, nume, email, telefon);
+			Client s = new Client(id, nume, email, telefon,angajatId);
 
 			result.add(s);
 		}
@@ -68,8 +70,9 @@ public static Client getClientById(int id) throws SQLException {
 			String nume = rs.getString("nume");
 			String email = rs.getString("email");
 			int telefon = rs.getInt("telefon");
+			int angajatId = rs.getInt("angajatId");
 
-			Client s = new Client(id, nume, email, telefon);
+			Client s = new Client(id, nume, email,telefon, angajatId);
 
 			result.add(s);
 		}
@@ -77,9 +80,9 @@ public static Client getClientById(int id) throws SQLException {
 		return result;
 	}
 	
-	public static void createClient(String nume, String email, int telefon) throws SQLException{
-		String insert="insert into client (nume,email,telefon)"
-				+ "value(?,?,?);";
+	public static void createClient(String nume, String email, int telefon, int angajatId) throws SQLException{
+		String insert="insert into client (nume,email,telefon, angajatId)"
+				+ "value(?,?,?,?);";
 		
 		Connection con = ServiceDBHelper.getConnection();
 		
@@ -88,6 +91,7 @@ public static Client getClientById(int id) throws SQLException {
 		stmt.setString(1,nume);
 		stmt.setString(2, email);
 		stmt.setInt(3, telefon);
+		stmt.setInt(4, angajatId);
 		
 		stmt.executeUpdate();
 		
@@ -95,11 +99,11 @@ public static Client getClientById(int id) throws SQLException {
 	}
 	
 	public static void createClient(Client s) throws SQLException {
-		createClient(s.getNume(),s.getEmail(),s.getTelefon());
+		createClient(s.getNume(),s.getEmail(),s.getTelefon(), s.getAngajatId());
 	}
 	
 	public static void updateClient(Client s) throws SQLException {
-		String update = "update client set nume=?, email=?,telefon=? where id=?";
+		String update = "update client set nume=?, email=?,telefon=?,angajatId=? where id=?";
 	
 		Connection con = ServiceDBHelper.getConnection();
 
@@ -108,7 +112,8 @@ public static Client getClientById(int id) throws SQLException {
 		stmt.setString(1, s.getNume());
 		stmt.setString(2, s.getEmail());
 		stmt.setInt(3, s.getTelefon());
-		stmt.setInt(4, s.getId());
+		stmt.setInt(4, s.getAngajatId());
+		stmt.setInt(5, s.getId());
 		
 		stmt.executeUpdate();
 		

@@ -6,17 +6,19 @@ public class Client {
 	private String nume;
 	private String email;
 	private int telefon;
+	private int angajatId;
 	
 	public Client() {
 		super();
 	}
 
-	public Client(int id, String nume, String email, int telefon) {
+	public Client(int id, String nume, String email, int telefon, int angajatId) {
 		super();
 		this.id = id;
 		this.nume = nume;
 		this.email = email;
 		this.telefon = telefon;
+		this.angajatId = angajatId;
 	}
 
 	public int getId() {
@@ -50,6 +52,16 @@ public class Client {
 	public void setTelefon(int telefon) {
 		this.telefon = telefon;
 	}
+
+	public int getAngajatId() {
+		return angajatId;
+	}
+
+	public void setAngajatId(int angajatId) {
+		this.angajatId = angajatId;
+	}
+
+	
 	
 	
 }

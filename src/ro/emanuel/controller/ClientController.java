@@ -2,6 +2,7 @@ package ro.emanuel.controller;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import ro.emanuel.dao.AngajatDAO;
 import ro.emanuel.dao.ClientDAO;
+import ro.emanuel.pojo.Angajat;
 import ro.emanuel.pojo.Client;
 
 
@@ -26,6 +29,13 @@ public class ClientController {
 
 		ArrayList<Client> customers = ClientDAO.getClienti();
 		model.put("customers", customers);
+		
+		ArrayList<Angajat> angajati =AngajatDAO.getAngajati();
+		HashMap<Integer, String> angajatiMap=new HashMap<Integer, String>();
+		for(Angajat a:angajati) {
+			angajatiMap.put(a.getId(), a.getCalificare());
+		}
+		model.put("angajati", angajatiMap);
 
 		return new ModelAndView("listClient.jsp", model);
 	}
@@ -38,6 +48,14 @@ public class ClientController {
 
 		Client st = ClientDAO.getClientById(id);
 		model.put("client", st);
+		
+		ArrayList<Angajat> angajati =AngajatDAO.getAngajati();
+		for(Angajat a:angajati) {
+			if(a.getId()==st.getAngajatId()) {
+				model.put("calificareAngajat", a.getCalificare());
+				//model.put("calificareAngajat", a.getCalificare());
+			}
+		}
 
 		return new ModelAndView("detaliiClient.jsp", model);
 
@@ -46,10 +64,13 @@ public class ClientController {
 //	Create
 
 	@RequestMapping(value = "adaugare-client.htm", method = RequestMethod.GET)
-	public ModelAndView showAdClient(Model model) {
+	public ModelAndView showAdClient(Model model) throws SQLException {
 
 		Client st = new Client();
 		model.addAttribute("clientForm", st);
+		
+		ArrayList<Angajat> angajati=AngajatDAO.getAngajati();
+		model.addAttribute("angajati", angajati);
 
 		return new ModelAndView("addClient.jsp", "model", model);
 	}
